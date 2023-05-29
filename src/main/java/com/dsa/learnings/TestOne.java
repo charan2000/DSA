@@ -1,6 +1,8 @@
 package com.dsa.learnings;
 
 import java.util.HashSet;
+import java.util.Map;
+import java.util.HashMap;
 
 public class TestOne {
 
@@ -46,9 +48,27 @@ public class TestOne {
         System.out.println(commonInTwoArraysExists());
         System.out.println(  stringReversal(":narahc mI sdnerp a&Y iH"));
         long endTime = System.nanoTime();
+        testMapsInJava();
         double timeElapsed = (endTime - startTime) / 1000000.00  ;
+
 
         System.out.println("Time Elapsed: " + timeElapsed);
 
     }
+
+    private static void testMapsInJava() {
+        Map<String,String> gfg = new HashMap<String,String>();
+      
+        gfg.put("GFG", "geeksforgeeks.org");
+        gfg.put("Practice", "practice.geeksforgeeks.org");
+        gfg.put("Code", "code.geeksforgeeks.org");
+        gfg.put("Quiz", "www.geeksforgeeks.org");
+
+        gfg.forEach((k,v) -> {
+            System.out.println("Key: " + k);
+            System.out.println("Value: " + v);
+        });
+
+    }
+
 }
